@@ -12,7 +12,7 @@ form.addEventListener("submit", (e) => {
     e.preventDefault();
     const search = input.value;
     message1.innerHTML = "Loading ....";
-    fetch("http://localhost:3000/weather?address=" + search)
+    fetch("/weather?address=" + search)
         .then((response) => {
             response.json().then(({ error, location, dataWeather } = {}) => {
                 if (error) {

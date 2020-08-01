@@ -3,7 +3,7 @@ const express = require("express");
 const hbs = require("hbs");
 const geocode = require("./utilis/geocode")
 const weatherStack = require("./utilis/weatherStack")
-
+const port=process.env.PORT;
 
 app = express();
 
@@ -92,6 +92,6 @@ app.get("*", (req, res) => {
         name: "Mahdi SOULTANA"
     })
 })
-app.listen(3000, () => {
-    console.log("Server is run in port 3000 !")
+app.listen(port, () => {
+    console.log("Server is run in port !"+port)
 })
