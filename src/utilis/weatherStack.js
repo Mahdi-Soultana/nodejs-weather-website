@@ -8,7 +8,8 @@ const weatherStack = (longitude, altitude, callback) => {
         else if (res.body.error) {
             callback("unabled your location Try another Search!", undefined)
         } else {
-            callback(undefined,`${res.body.current.weather_descriptions[0]} . The Tempreture Here Is ${res.body.current.temperature} dergree, But it's Fell Like ${res.body.current.feelslike} dergree`)
+           
+            callback(undefined,`${res.body.current.weather_descriptions[0]} . The Tempreture Here Is ${res.body.current.temperature} dergree, But it's Fell Like ${res.body.current.feelslike} dergree . and The Humudity there Is ${res.body.current.humidity}% . `)
         }
     })
 

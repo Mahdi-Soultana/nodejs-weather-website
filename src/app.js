@@ -3,7 +3,7 @@ const express = require("express");
 const hbs = require("hbs");
 const geocode = require("./utilis/geocode")
 const weatherStack = require("./utilis/weatherStack")
-const port=process.env.PORT;
+const port=process.env.PORT || 3000;
 
 app = express();
 
